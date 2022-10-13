@@ -8,3 +8,4 @@ cpf_novo = Documento.cria_documento(exemplo_cpf)
 print(cpf_novo)
 cnpj_novo = Documento.cria_documento(exemplo_cnpj)
 print(cnpj_novo)
+
