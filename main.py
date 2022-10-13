@@ -1,11 +1,12 @@
-from cpf_cnpj import Documento
+import re
 
-exemplo_cpf = "23058073844"
-exemplo_cnpj = "00494317000121"
+from telefones_br import TelefonesBr
 
+telefone = "551633360949"
 
-cpf_novo = Documento.cria_documento(exemplo_cpf)
-print(cpf_novo)
-cnpj_novo = Documento.cria_documento(exemplo_cnpj)
-print(cnpj_novo)
+telefone_objeto = TelefonesBr(telefone)
+print(telefone_objeto)
 
+# padrao = "([0-9]{2,3})?([0-9]{2})?([0-9]{4,5})([0-9]{4})"
+# resposta = re.search(padrao,telefone)
+# print(resposta.group())

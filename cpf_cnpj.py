@@ -50,4 +50,3 @@ class DocCnpj:
 
     def __str__(self):
         return self.format_cnpj()
-
