@@ -1,12 +1,12 @@
-import re
+import requests
+from acesso_cep import BuscaEndereco
 
-from telefones_br import TelefonesBr
+cep = 14801082
+objeto_cep = BuscaEndereco(cep)
 
-telefone = "551633360949"
+# r = requests.get("https://viacep.com.br/ws/01001000/json")
+# print(r.text)
 
-telefone_objeto = TelefonesBr(telefone)
-print(telefone_objeto)
+bairro, cidade, uf = objeto_cep.acessa_via_cep()
+print(bairro, cidade, uf)
 
-# padrao = "([0-9]{2,3})?([0-9]{2})?([0-9]{4,5})([0-9]{4})"
-# resposta = re.search(padrao,telefone)
-# print(resposta.group())
